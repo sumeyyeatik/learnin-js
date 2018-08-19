@@ -1,0 +1,55 @@
+Airline : <input id="airline-box"> <br>
+Number of seats : <input id="number-of-seats"> <br>
+<button id="book-fligt-btn"> book flight </button> <br>
+<input id="result-box">
+
+
+
+<script type="text/javascript">
+
+var available_seats_THY=15
+var available_seats_PGS=10
+
+function book_flight() {
+	var requested_airline=document.getElementById("airline-box").value
+	var requested_number=document.getElementById("number-of-seats").value
+
+	console.log(
+		"requested_number: " + requested_number + 
+		", requested_airline: "+ requested_airline +
+		", available_seats_THY: "+ available_seats_THY +
+		", available_seats_PGS: "+ available_seats_PGS)
+	
+
+	if (requested_airline == "THY") {
+		
+		if (available_seats_THY>requested_number) {
+			console.log("yer var")
+			available_seats_THY=available_seats_THY-requested_number
+
+		} else {
+			console.log("yer yok")
+		}
+
+	} else if (requested_airline == "PGS") {
+
+		if (available_seats_PGS>requested_number) {
+			console.log("yer var")
+			available_seats_PGS=available_seats_PGS - requested_number
+
+		} else {
+			console.log("yer yok")
+		}
+		
+	} else {
+		console.log("airline is unknown")
+	}
+
+}
+ 
+document.getElementById("book-fligt-btn").onclick=book_flight
+
+
+
+
+</script>

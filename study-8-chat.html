@@ -1,0 +1,24 @@
+Nick: <input id="nick-box"> <br/>
+Message: <input id="msg-box" > <br/>
+<button id="submit-btn">submit</button>
+<hr/>
+
+
+<ul id="msg-list">
+	<!-- <li> <b> Mustafa </b> : naber?</li> -->
+	<!-- <li> <b> Sumeyye </b> : iyilik sender naber?</li> -->
+</ul>
+
+<script type="text/javascript">
+	
+	function add_message() {
+		var nick =document.getElementById("nick-box").value
+		var message = document.getElementById("msg-box").value
+
+		var new_li = document.createElement("li")
+		new_li.innerHTML = "<b>" + nick + "</b>: "+ message
+		document.getElementById("msg-list").appendChild(new_li)
+	}
+
+	document.getElementById("submit-btn").onclick=add_message
+</script>

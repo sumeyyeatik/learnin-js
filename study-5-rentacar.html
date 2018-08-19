@@ -1,0 +1,44 @@
+Hour: <input id="hour-box"> <br/>
+Vehicle: <input id="vehicle-box" value="car"> <br/>
+Age: <input id="age-box"> <br>
+<button id="calculate-btn">calculate</button> <br/>
+Final Price: <input id="final-box">
+
+<script type="text/javascript">
+function calculate_rent_price() {
+	var requested_hour = document.getElementById("hour-box").value
+	console.log(requested_hour)
+	var requested_vehicle = document.getElementById('vehicle-box').value
+	console.log(requested_vehicle)
+	var requested_age= document.getElementById("age-box").value
+	console.log(requested_age)
+
+	var price_per_hour=2
+	var final_price=price_per_hour*requested_hour
+
+	if (requested_age<26) {
+		final_price=final_price*1.1
+
+	}
+	
+	if (requested_hour>24) {
+		final_price=final_price*0.8
+	}
+
+	if (requested_vehicle=="car") {
+		final_price=final_price+10
+	} else if (requested_vehicle=="van") {
+		final_price=final_price+15
+	} else {
+		console.log("unknown vehicle type")
+	}
+
+
+
+	
+	console.log(final_price)
+	document.getElementById("final-box").value=final_price
+}
+
+document.getElementById("calculate-btn").onclick=calculate_rent_price
+</script>

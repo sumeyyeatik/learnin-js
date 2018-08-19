@@ -1,0 +1,32 @@
+Guest number: <input id="guest-box"> <br/>
+Room number: <input id="room-box"> <br/>
+Breakfast: <input id="breakfast-box"> <br/>
+Day number: <input id="day-box"> <br/>
+<button id="calculate-btn">calculate</button>
+
+<script type="text/javascript">
+	function calculate_price() {
+		
+		var requested_guests=document.getElementById("guest-box").value
+		var requested_rooms=document.getElementById('room-box').value
+		var requested_breakfast=document.getElementById("breakfast-box").value
+		var requested_days=document.getElementById("day-box").value
+
+		var price_per_person=10
+		var price_per_room=30
+		var price_per_br=5
+		var final_price=price_per_person*requested_guests + price_per_room * requested_rooms
+
+		if (requested_breakfast=="yes") {
+			final_price=final_price+price_per_br*requested_guests
+		}
+
+		final_price=final_price*requested_days
+
+		console.log(final_price)
+
+
+	}
+
+	document.getElementById("calculate-btn").onclick=calculate_price
+</script>

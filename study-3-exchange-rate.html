@@ -1,0 +1,22 @@
+Lira : <input id="tl-box"> <br />
+Euro : <input id="eu-box"> <br/>
+Dolar : <input id="dl-box"> <br/>
+<button id="convert-btn">convert</button>
+
+<script type="text/javascript">
+
+	function convert_curreny() {
+		console.log("ceviriyorum")
+		var tl = document.getElementById("tl-box").value
+		console.log(tl)
+		var tl_eu_rate=7
+		var tl_dl_rate=5
+		document.getElementById("dl-box").value=tl / tl_dl_rate
+		document.getElementById("eu-box").value=tl/tl_eu_rate
+
+	}
+
+document.getElementById('convert-btn').onclick=convert_curreny
+
+
+</script>

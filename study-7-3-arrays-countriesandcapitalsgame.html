@@ -1,0 +1,54 @@
+<style type="text/css">
+	body {
+		text-align: center;
+	}
+</style>
+
+<button id="play-button">Play</button>
+<hr />
+Country <br />
+<input id="country-name" > <br />
+City<br />
+<input id="city-box"> <br />
+<button id="check-btn"> check </button>
+<input id="result">
+
+
+<script type="text/javascript">
+
+var countries = ["Turkey", "Greece", "Italy", "Croatia", "Azerbaijan", "Georgia", "Iran", "France", "Sweden", "UK"]
+var capitals = ["Ankara", "Athens", "Rome", "Zagreb", "Baku", "Tiblisi", "Tahran", "Paris", "Stockholm", "London"  ]
+var selected;
+var true_counter = 0
+var false_counter = 0
+
+function check() {
+	var user_city = document.getElementById("city-box").value
+	var correct_city= capitals[selected]
+
+	if (user_city.toLowerCase() == correct_city.toLowerCase()) {
+		true_counter = true_counter + 1
+		document.getElementById("result").value="dogru"
+	} else {
+		false_counter = false_counter + 1
+		document.getElementById("result").value="yanlis, "+ correct_city
+		console.log(correct_city)
+	}
+	console.log("true_counter: " + true_counter + ", false_counter: "+ false_counter)
+	ask()
+
+}
+
+function ask() {
+	selected = parseInt(Math.random()*countries.length)
+	document.getElementById("country-name").value=countries[selected]
+	document.getElementById("city-box").value=""
+	document.getElementById("city-box").focus()
+}
+
+
+document.getElementById("play-button").onclick=ask
+document.getElementById("check-btn").onclick=check
+ask()
+
+</script>

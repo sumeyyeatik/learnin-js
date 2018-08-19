@@ -1,0 +1,17 @@
+Weight: <input value="60" id="weight-box" /> <br />
+Height: <input value="160" id="height-box" /> <br />
+<button id="calculate-button">Calculate</button>
+Result: <input value="" id="result-box" /> <br />
+
+<script type="text/javascript">
+	console.log("hello there")
+	console.log("how are you?")
+
+	function calculate_if_obese() {
+		console.log(document.getElementById("weight-box").value)
+		console.log(document.getElementById("height-box").value)
+		document.getElementById("result-box").value = document.getElementById("height-box").value / document.getElementById("weight-box").value
+	}
+
+	document.getElementById("calculate-button").onclick=calculate_if_obese
+</script>
