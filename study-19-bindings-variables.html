@@ -1,0 +1,75 @@
+<script type="text/javascript">
+
+	// "sumeyye"
+	// console.log("kamil");
+	// // at line 3rd, "sumeyye" will not be accesible any more because it was not used or referred by any variable or anyone, so javascript will remove it from memory.
+
+
+
+	// let amount = 44;
+	// if (amount == "555") { // 555 will be created as a value in memory, and then comparision will take place, eventually 555 will be removed from memory, in other words, the memory location of 555 will be freed.
+
+	// }
+
+
+
+	// 5; // will disappear just after get created in memory
+	// 5 * 3; // 5 and 3 will be created in memory, and the multiplication will take place, finally 5 and 3, and the 15, which is result of multiplication, will be removed.
+
+
+
+	// let result = 5 * 4; // will create 5 and 4 in the memory, and then multiply them and create the output of multiplication, which is 20, in the memory too. then remove 5 and 4 from memory. finally bind `result` to 20.
+
+
+
+	// let fname = "ali"; // ali will be created in the memory and binding will take place. 
+	// fname = "sumeyye"; // sumeyye will be created in the memory, and fname will be binded to sumeyye, and ali will be freed in the memory.
+
+
+
+	// // you should not think of bindings like boxes. bindings are just references between names and values.
+	// let amount = 5; // amount ---(refers to)--> 5 (the value  which is created and stored in memory)
+	// amount = 4; // amount ---(refers to)--> 4 (the value which is created and stored in memory). And here, if noone else refers to 5, then it will be removed.
+
+
+
+
+	// let score;  // the name does not refer to anything. when you ask its value, you will get undefined
+	// console.log(score)
+	// if (50 > 20) {
+	// 	score = "success"
+	// } else {
+	// 	score = "failure"
+	// }
+	// console.log(score) // but here it will be success, not undefined.
+
+
+
+
+	// let population_of_turkey = 85 // in million
+	// const capital_of_turkey = "Ankara";
+	// console.log(capital_of_turkey)
+	// console.log(population_of_turkey)
+
+	// population_of_turkey = 80
+	// capital_of_turkey = "Istanbul" // this will raise an type erorr as constants cannot be changed later after the first binding.
+
+
+
+	// // here, even though we have not created any binding called `document`, ther it is.
+	// document.getElementsByClassName('some-class');
+	// console.log(document)
+	// // that means, the scope/environment comes with some pre-existing bindings such as document, console
+
+
+
+	// both prompt and another_prompt names will point to the same address in the memory
+	// the address which stores a function
+	console.log(prompt)
+	// prompt("enter your wishes")
+	let another_prompt = prompt
+	console.log(another_prompt("lala"))
+	// another_prompt("hello i am kamil")
+
+
+</script>

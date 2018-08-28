@@ -1,0 +1,65 @@
+<h2> My Bank Account </h2>
+
+<div style="padding: 10px; background-color: #f0f0e0">
+
+	<div style="border:1px solid gray;display: inline-block; width: 47%; padding: 10px">
+		<h4>Deposit</h4>
+		Date: <input id="deposit-date-box"> <br/>
+		Amount: <input id="deposit-amount-box"> <br>
+		<button id="deposit-btn">deposit</button>		
+	</div>
+
+	<div style="border:1px solid gray;display: inline-block; width: 47%; padding: 10px">
+		<h4>Withdraw</h4>
+		Date: <input id="withdraw-date-box"> <br/>
+		Amount: <input id="withdraw-amount-box"> <br/>
+		<button id="withdraw-btn">withdraw</button>
+	</div>
+
+</div>
+
+<hr>
+
+<h3>Transactions</h3>
+balance: <b id="balance">0</b>
+<ul id="transactions">
+	<!-- <li> <b>02.06.2018</b> +20 </li> -->
+</ul>
+
+<script type="text/javascript">
+
+function withdraw() {
+	console.log("withdrawing")
+	var date = document.getElementById("withdraw-date-box").value
+	var amount = parseInt(document.getElementById("withdraw-amount-box").value)
+	add_transaction(date, -amount)
+	change_balance(-amount)
+}
+
+function deposit() {
+	console.log("deposit")
+	var date = document.getElementById("deposit-date-box").value
+	var amount = parseInt(document.getElementById("deposit-amount-box").value)
+	add_transaction(date, amount)
+	change_balance(amount)
+}
+
+function add_transaction(date, amount) {
+	var new_li = document.createElement("li")
+	new_li.innerHTML="<b>"+date+"</b> "+amount
+	document.getElementById("transactions").appendChild(new_li)
+}
+
+function change_balance(amount) {
+	var balance = parseInt(document.getElementById("balance").innerHTML)
+	balance = balance + amount
+	document.getElementById("balance").innerHTML=balance
+}
+
+
+document.getElementById("deposit-btn").onclick=deposit
+document.getElementById("withdraw-btn").onclick=withdraw
+
+
+
+</script>

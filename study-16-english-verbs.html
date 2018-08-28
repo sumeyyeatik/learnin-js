@@ -1,0 +1,50 @@
+<label>Verb: </label> <input id="verb-box" /> <button id="generate-btn">generate</button>
+
+<script type="text/javascript">
+	
+	function generate_btn_onclick() {
+		var verb_box_value = document.getElementById("verb-box").value
+		generate_forms(verb_box_value)
+	}
+
+	function generate_forms(verb) {
+		console.log("the given verb is " + verb)
+
+		// let's say verb is 'smile' whose length is 5
+		// but when we locate any letter in a string/text/array,
+		// it stars counting from zero
+		// so, s=0, m=1, i=2, l=3, e=4
+		// it's obvious, we need to locate 4, which is just length-1
+		var last_letter = verb[verb.length-1]
+
+		if (last_letter == "e") {
+			var past_form = verb + "d"
+		} else if (last_letter == "y") {
+			// omitting the last letter
+			var past_form = verb.substr(0, verb.length-1) + "ied"
+		} else if (last_letter == "p") {
+			var past_form = verb + "ped"
+		} else {
+			var past_form = verb + "ed"
+		}
+
+
+		var perfect_form = past_form
+
+		console.log("2nd form: " + past_form)
+		console.log("3rd form: " + perfect_form)
+	}
+
+	// generate_forms("listen")
+	// generate_forms("smile")
+	// generate_forms("try")
+	// generate_forms("stop")
+
+	document.getElementById("generate-btn").onclick = generate_btn_onclick
+	/**
+	when you click on this button, generate_btn_onclick will be called.
+	in generate_btn_onclick:
+		the value of html element with id verb-box will be assigned to verb_box_value variable.
+		then, "generate_form" function will be called, but the function requires one input/parameter/argument. so, we pass verb_box_value to the function "generate_form"
+	*/
+</script>

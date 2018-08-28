@@ -1,0 +1,26 @@
+<script type="text/javascript">
+
+	console.log("global scope: " + name)
+
+	function print_name() {
+		var name = "sumeyye"
+		console.log("in the print_name() function: " + name)
+		name = "hatice"
+		console.log("in the print_name() function: " + name)
+	}
+
+	print_name()
+
+	console.log("global scope: " + name)
+
+
+	var counter = 0;
+	function increase_number() {
+		counter = counter + 1
+		console.log(counter)
+	}
+	
+	increase_number()
+	increase_number()
+
+</script>

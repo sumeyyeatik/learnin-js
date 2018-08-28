@@ -1,0 +1,31 @@
+First name: <input id="firstname-box" > </br>
+Last name: <input id="lastname-box"> </br>
+Language: <input id="lang-box"> </br>
+<button id="greet-btn">greet me</button> </br>
+
+<input id="greeting-msg">
+
+<script type="text/javascript">
+
+	 function greet_user() {
+	 	var first_name = document.getElemenById("firstname-box").value
+	 	var last_name = document.getElemenById("lastname-box").value
+	 	var  language = document.getElemenById("lang-box").value
+
+	 	if (language="spanish") 
+	 	var greeting = "hola"
+
+	 	if (language="turkish")
+	 		var greeting = "merhaba"
+
+	 	if (language="german") 
+	 		var greeting= "hallo"
+
+	 		document.getElemenById("greeting-msg").value= greeting + " " + first_name +" " + last_name
+
+	 }
+
+	  document.getElementById("greet-btn").onclick=greet_user
+
+</script>
+

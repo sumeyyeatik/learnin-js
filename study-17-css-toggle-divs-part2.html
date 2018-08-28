@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is my pageeee</title>
+	<style type="text/css">
+		.form {
+			background-color: #17d0ae;
+		    border: 1px solid #077964;
+		    width: 300px;
+		    padding: 50px;
+		    text-align: center;
+		}
+		#sign-up-form {
+			display: none
+		}
+	</style>
+</head>
+<body>
+
+<button id="sign-in-btn">Show sig-in form</button>
+<button id="sign-up-btn">Show sign-up form</button>
+
+<div id="sign-up-form" class="form">sign uppppp</div>
+<div id="sign-in-form" class="form">sign innnnn</div>
+
+<script type="text/javascript">
+
+function show_sign_in_form() {
+	document.getElementById("sign-up-form").style.display = "none"
+	document.getElementById("sign-in-form").style.display = "block"
+}
+
+function show_sign_up_form() {
+	document.getElementById("sign-up-form").style.display = "block"
+	document.getElementById("sign-in-form").style.display = "none"
+}
+
+document.getElementById("sign-in-btn").onclick = show_sign_in_form
+document.getElementById("sign-up-btn").onclick = show_sign_up_form
+</script>
+
+</body>
+</html>

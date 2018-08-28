@@ -1,0 +1,75 @@
+<style type="text/css">
+	#posts{
+		width: 60%;
+	}
+	.post {
+		background-color: #e0e8f0;
+		margin: 10px;
+		padding: 10px;
+	}
+	.comments {
+		padding:10px;
+		background-color: #d0d6e2
+	}
+</style>
+
+
+<input id="post-box" > <button id="post-btn"> post </button>
+<hr>
+
+<ul id="posts"> 
+
+<!-- 	<li class="post">
+			<div>i bought an apple </div>
+			<button>like</button>
+			<div class="Comments">
+				<h5>Comments</h5>
+				<ul>
+					<li> it looks good
+					</li>
+				</ul>
+				<input>
+			</div>
+		</li> -->
+
+
+
+</ul>
+
+<script type="text/javascript">
+	
+function add_new_post() {
+	console.log("something")
+	var post_message=document.getElementById("post-box").value
+	console.log(post_message)
+
+	var new_li= document.createElement("li")
+	new_li.classList.add("post")
+	new_li.innerHTML = "<div>" + post_message +"</div>\
+		<span class='counter'>0</span> <button class='like-btn'>like</button>\
+		<div class=\"Comments\">\
+			<h5>Comments</h5>\
+			<ul></ul>\
+			<input><button>add</button>\
+		</div>"
+
+	document.getElementById("posts").prepend(new_li)
+	var like_buttons = new_li.getElementsByClassName("like-btn") // important: only search in new_li, not entire document. othewise all the buttons in all li will be found
+	like_buttons[0].onclick = like_post
+}
+
+function like_post() {
+	var btn = this // 'this' points to the button(or caller) which calls this 'like_post' function
+	var post_li = btn.parentElement
+	var counter_span = post_li.getElementsByClassName("counter")[0]
+	var counter = parseInt(counter_span.innerHTML)
+	counter = counter + 1
+	counter_span.innerHTML = counter
+}
+
+
+
+document.getElementById("post-btn").onclick=add_new_post
+
+</script>
+

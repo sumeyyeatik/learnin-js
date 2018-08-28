@@ -1,0 +1,110 @@
+<script type="text/javascript">
+	
+// const square = function(x) {
+//   return x * x;
+// };
+
+// // the same function defined in a different way. they are totally equal.
+// // function square(x) {
+// //   return x * x;
+// // };
+
+// console.log(square(2));
+
+// let square_let = function(x) {
+//   return x * x;
+// };
+
+// console.log(square_let(2));
+
+// // square = function(x) {...}  will throw an error, because square binding is created as `const`
+// // 
+// // here, we can define another function and assign it to square_let because it is not defined with 'const'
+// square_let = function(x) {
+//   return x * x + 1;
+// };
+// console.log(square_let(2));
+
+
+
+
+// const power = function(base, exponent) {
+//   let result = 1;
+//   for (let count = 0; count < exponent; count++) {
+//     result *= base;
+//   }
+//   return result;
+// };
+// console.log(power(2, 5));
+
+
+
+
+
+
+// // every function does not have to return a value. below, makenoise does not return anything.
+// const makeNoise=function() {
+// 	console.log("rerer")
+// }
+
+// // here we call the functon, and its body section will be run.
+// makeNoise()
+
+// // but here, we are just logging the value of makeNoise binding. Don't get confuse!
+// // we do not call it, as we do not provide paranthesis 
+// console.log(makeNoise)
+
+// // but here, we call it. but we will see 'undefined' in console, becaue the function does not return anything.
+// console.log(makeNoise())
+
+// let x = makeNoise
+// console.log(x)
+
+
+
+
+
+
+// // FUNCTIONS AS VALUES
+// const bark = function() {
+// 	console.log("I am a big DOG.. hav havv... hrrrr...");
+// }
+
+// const meow = function() {
+// 	console.log("I am a cat. meovvv.....");
+// }
+
+// const makeItSpeak = function(action) {
+// 	console.log("Your pet is speaking, isn't that great?")
+// 	action() // here it does not matter what action is. either meov or bark, or something else. it only has to be a function so it can be called.
+// }
+
+// // makeItSpeak(3) // this will cause an error of "action is not a function". because you can not call '3'
+
+// makeItSpeak(bark) // Note that we do not call bark here, we just pass its value to makeItSpeak. and its value is a function, which will be called in makeItSpeak.
+// makeItSpeak(meow)
+
+
+
+// YET ANOTHER EXAMPLE
+const publish_to_twitter = function (tweet) {
+	console.log(`Twitter message: ${tweet} `);
+}
+
+const publish_to_facebook = function (post) {
+	console.log(`Facebook post: ${post} `);
+}
+
+// // testing the functions
+// publish_to_twitter("follow me on twitter.");
+// publish_to_facebook("updated my wall picture");
+
+// from the perspecive of share_on_social_media function, what target is does not matter unless it is a function which takes and argument.
+const share_on_social_media = function (target) {
+	target("I just won the game!")
+}
+
+share_on_social_media(publish_to_facebook)
+share_on_social_media(publish_to_twitter)
+
+</script>

@@ -1,0 +1,19 @@
+<p id="p1"></p>
+
+<script type="text/javascript">
+	var person_name = "Sumeyye Atik"
+	var my_paragraph = document.getElementById("p1")
+	my_paragraph.innerHTML = "<b>Mustafa Atik</b>"
+
+	// now what we want is that to replace "musttafa atik" with the value of the variable person_name
+	// in concerete explanation, we want to have '<b>Sumeyye Atik</b>'
+
+	my_paragraph.innerHTML = "<b>" + person_name + "</b>"
+	var b_tag_open = "<b>"
+	var b_tag_close = "</b>"
+	my_paragraph.innerHTML = b_tag_open + person_name + b_tag_close
+
+	var first_name = "Neval"
+	var last_name = "Uysal Atik"
+	my_paragraph.innerHTML = b_tag_open + first_name + " " + last_name + b_tag_close	
+</script>

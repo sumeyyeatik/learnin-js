@@ -1,0 +1,34 @@
+<ul id="insanlar">
+	<li class="galatasary">Mustafa</li>
+	<li class="galatasary vegeterian">Sumeyye</li>
+	<li class="besiktas">Ali</li>
+	<li class="besiktas vegeterian">Neval</li>
+</ul>
+
+<ul id="hayvanlar">
+	<li class="vegeterian">Inek</li>
+</ul>
+
+<script type="text/javascript">
+
+	function print_elements(elements) {
+		for (var i = elements.length - 1; i >= 0; i--) {
+			console.log(elements[i].innerHTML)
+		}
+	}
+
+	console.log("galatasarylilar:")
+	print_elements(document.getElementsByClassName("galatasary"))
+
+	console.log("besiktaslilar:")
+	print_elements(document.getElementsByClassName("besiktas"))
+
+
+	console.log("tum vegeterianlar ve otoburlar:")
+	print_elements(document.getElementsByClassName("vegeterian"))
+
+	console.log("vegeteryan insanlar:")
+	print_elements(document.getElementById("insanlar").getElementsByClassName("vegeterian"))
+
+	
+</script>

@@ -1,0 +1,41 @@
+<div>
+	<h2>Our Product List</h2>
+	<ul>
+		<li><a><span>Nike shoe1</span> <b>$30</b></a></li>
+		<li><a><span>Nike shoe2</span> <b>$31</b></a></li>
+		<li><a><span>Nike shoe3</span> <b id="x">$32</b></a></li>
+	</ul>
+	<div>
+		<a>
+			<span>Clicked product: </span>
+			<span id="target_element">name of the product</span>
+		</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var initial = document.getElementById("x");
+	var target_element = initial.parentElement.parentElement.parentElement.parentElement.childNodes[5].childNodes[1].childNodes[3]
+
+
+</script>
+
+<div>
+	<h4> Stores List </h4>
+	<ul>
+		<li><b>A store</b> <span>Iletisim</span></li>
+		<li><b>B Store</b><span id="x2"> iletisim2</span></li>
+	</ul>
+	<div>
+		<ul>
+			<li><span><b id="target_element2">En cok Satilan</b></span></li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var ilk = document.getElementById("x2");
+	var target_element_text= ilk.parentElement.parentElement.parentElement.childNodes[5].childNodes[1].childNodes[1].childNodes[0].childNodes[0].innerText
+	console.log(target_element_text)
+
+</script>

@@ -1,0 +1,69 @@
+<script type="text/javascript">
+
+
+	// let biggest_number = Math.max(2, 3);
+	// console.log(biggest_number)
+
+
+
+	// function our_max(number1, number2) {
+	// 	if (number1 > number2) {
+	// 		return number1;
+	// 	} else {
+	// 		return number2;
+	// 	}
+	// }
+
+	// let biggest_number= our_max(2, 3);
+	// // here, first 2 and 3 will be created in the memory. and, our_max will be called with the just created values. that means, number1 and number2 in for this call will be 2 and 3 respectively.
+	// // finally, our_max will return another value, in this case it is either number1's value or number2's value.
+	
+
+
+	
+	// some functions do not require any arguments/parameters, and do not return any value
+	function make_noise() {
+		console.log("grrrrrrrr")
+		console.log("arrrrggggggg")
+	}
+
+	let noise_result = make_noise();
+	console.log(noise_result)
+
+
+
+
+	// function like_dark_hole_eat_this(something) {
+	// 	// I am doing nothing...
+	// }
+
+	// let y = like_dark_hole_eat_this("is ther anybody there?")
+	// console.log(y)
+	// // here, dark_hole function takes an argument but does not return anything. so, y will not be binded to any value. so, accesing it in log() function will output "undefined"
+
+
+	// // it is up to software developer to desing functions. so, functions can either have an argument or not, or return value or not, or both.
+	// function give_a_color_name() {
+	// 	let possible_colors = ["blue", "green", "ping", "black", "white"];
+	// 	let selected_index = parseInt(Math.random() * 5); // generates random number between 0 and 5
+	// 	let color_name = possible_colors[selected_index];
+	// 	return color_name;
+	// }
+	// let my_color = give_a_color_name()
+	// console.log(my_color);
+
+
+	// Math.max(Math.max(5, Math.min(8,9)), 10)
+	// // first, the outher max function will be callled, but before, its arguments needs to be prepared.
+	// // that means, the inner max function will be called. but also its arguments needs to be preapred.
+	// // so 5 will be created in the memory.
+	// // but the second argument is also another function call, Max.min.
+	// // so, first, Max.min's arguments will be preapred, 8 and 9 will be created in the memory.
+	// // then Math.ming will return a value(8) which will be the second of the inner max() function.
+	// // and the inner max will be run and it returns 8.
+	// // now the arguments of the outher max are ready. it will be run and it returns 10
+	// // but as there is no binding to that 10, all the values will be freed/deallocated.
+
+
+
+</script>

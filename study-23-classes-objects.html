@@ -1,0 +1,53 @@
+<script type="text/javascript">
+// class MobilePhone{
+// 	constructor(model, memory, price) {
+//         this.model = model;
+//         this.memory = memory;
+//         this.price = price;
+//     }
+
+// 	isExpensive() {
+// 		if (this.price > 500)
+// 			return true;
+// 		else
+// 			return false;
+// 	}
+
+// }
+
+// let iphone8 = new MobilePhone("8-jaja", "4GB", 599)
+// let lg4 = new MobilePhone("lg-modelll", "3GB", 449)
+
+// console.log(iphone8.isExpensive())
+// console.log(lg4.isExpensive())
+
+
+class Animal {
+	constructor (species, age, name) {
+		this.species = species;
+		this.age = age;
+		this.name = name;
+	}
+
+	move() {
+		console.log("moving...")
+	}
+
+	tellMeYourAge() {
+		console.log(`My age is ${this.age}`);
+	}
+
+	tellMeYourName() {
+		console.log(`My name is ${this.name}`);
+	}
+}
+
+let tikitos = new Animal("cat", 23, "tikitos");
+console.log(tikitos.species)
+tikitos.tellMeYourAge()
+
+let rifki = new Animal("dog", 14, "rifki");
+rifki.tellMeYourName()
+rifki.tellMeYourAge()
+
+</script>

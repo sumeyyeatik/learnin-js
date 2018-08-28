@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is my pageeee</title>
+	<style type="text/css">
+		#shinny-box {
+			background-color: #17d0ae;
+		    border: 1px solid #077964;
+		    width: 300px;
+		    padding: 50px;
+		    text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<button id="show-btn">Show</button>
+<button id="hide-btn">Hide</button>
+
+<div id="shinny-box">Can you see me?</div>
+<div>this is bottom</div>
+
+<script type="text/javascript">
+
+function hide_shinny_box() {
+	document.getElementById("shinny-box").style.display = "none"
+}
+
+function show_shinny_box() {
+	document.getElementById("shinny-box").style.display = "block"
+}
+
+document.getElementById("show-btn").onclick = show_shinny_box
+document.getElementById("hide-btn").onclick = hide_shinny_box
+</script>
+
+</body>
+</html>
