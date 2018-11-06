@@ -1,0 +1,44 @@
+weight: <input id="weight-box" value="50"> <br/>
+daily calorie intake: <input id="cal-box"> <br/>
+daily running(minutes): <input id="running-box"> <br/>
+<button id="Calculate-btn">caluculate</button> <br/>
+estimated weight <input id="resut-box">
+
+<script type="text/javascript">
+function calculate_estimated_weight () {
+
+	var weight = document.getElementById("weight-box").value
+	var daily_calorie_intake = document.getElementById("cal-box").value
+	var daily_running_mins = document.getElementById("running-box").value
+console.log("okok")
+console.log(weight)
+console.log(daily_calorie_intake)
+console.log(daily_running_mins)
+
+var estimated_weight = parseInt(weight) + parseInt((daily_calorie_intake- daily_running_mins*4)*30/5000)
+console.log(estimated_weight)
+
+document.getElementById("resut-box").value=estimated_weight
+
+}
+
+	document.getElementById("Calculate-btn").onclick=calculate_estimated_weight
+
+</script>
+
+weight + ((calori - run_mins*4) * 30 / 5000)
+A user provides the following data via entering into text boxes.
+
+weight(kg): 50
+daily calorie intake(kj):
+daily running(minutes):
+When the user submit(clicks a button) the data, the system should estimate the weight and display it on the screen.
+
+Suppose that the estimation logic is as follows: estimated_weight = weight = (calorie - running*4) * 30
+
+This formula calculates estimate what the weight might be after 30 days based on the provided data.
+
+Tecnical specifications:
+
+use input boxes for user to enter data.
+use a span element to display estiamted weight.
