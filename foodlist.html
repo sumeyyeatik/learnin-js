@@ -1,0 +1,53 @@
+
+
+Menu item title: <input id="title-box" > <br/>
+Category: <input id="category-box" > <br/>
+<button id="submit-btn">submit</button>
+<hr/>
+
+<h3>Main course</h3>
+<ul id="main-course-list">
+    <li>pilav</li>
+</ul>
+
+<h3>Salads</h3>
+<ul id="salads-list">
+    <li>coban salata</li>
+</ul>
+
+<h3>Drinks</h3>
+<ul id="drinks-list">
+    <li>ayran</li>
+</ul>
+
+<script type="text/javascript">
+    function add_menu_item() {
+        var title =document.getElementById("title-box").value
+        var category =document.getElementById("category-box").value
+
+        var new_li = document.createElement("li")
+		new_li.innerHTML = "<b>" + title + "</b>: "
+
+
+        if (category== "main course") {
+            document.getElementById("main-course-list").appendChild(new_li)
+        }
+             else if (category == "salads") {
+                document.getElementById("salads-list").appendChild(new_li)}
+
+                 else if (category == "drinks") { document.getElementById("drinks-list").appendChild(new_li)}
+
+
+	
+	
+        // create li element and then insert it into the right category list
+    }
+    document.getElementById("submit-btn").onclick = add_menu_item
+</script>
+
+
+
+</body>
+</html>
+		
+</script>
