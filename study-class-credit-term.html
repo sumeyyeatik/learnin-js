@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+Ders Adi: <input id="title-box" > <br/>
+Kredisi: <input id="kredi-box" > <br/>
+Donem: <input id="term-box" > (first/second term) <br/> 
+<button id="submit-btn">submit</button>
+<hr/>
+
+<h3>1.Donem Ders-kredi listesi</h3>
+<ul id="1.term">
+</ul>
+
+<h3>2.Donem Ders-kredi listesi</h3>
+<ul id="2.term">
+</ul>
+
+
+<script type="text/javascript">
+function add_class_to_term_list() {
+	var title =document.getElementById("title-box").value
+	var kredi=document.getElementById("kredi-box").value
+	var term =document.getElementById("term-box").value
+	var new_li=document.createElement("li")
+	new_li.innerHTML = "<span>" + title + "</span><i>" + kredi + "</i>"
+	if (term == "first term") {
+		document.getElementById("1.term").appendChild(new_li)
+	} else if (term == "second term") {
+		document.getElementById("2.term").appendChild(new_li)
+	}
+}
+document.getElementById("submit-btn").onclick = add_class_to_term_list
+</script>
+
+
+
+</body>
+</html>
