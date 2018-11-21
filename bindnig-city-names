@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<ul>
+    <li>
+        <span>Istanbul</span>
+        <button id="turkey-btn">alert</button>
+         <button id="delete-turkey-btn">delete</button>
+    </li>
+    <li>
+        <span>Berlin</span>
+        <button id="germany-btn">alert</button>
+        <button id="delete-germany-btn">delete</button>
+    </li>
+    <li>
+        <span>Madrid</span>
+        <button id="spain-btn">alert</button>
+        <button id="delete-spain-btn">delete</button>
+    </li>
+</ul>
+
+<script type="text/javascript">
+function alert_capital_name() {
+
+
+    let the_buttons = document.getElementsByTagName("button")
+    let li = this.parentNode
+    let city_name_span = li.getElementsByTagName("span")[0]
+    
+    alert(city_name_span.innerHTML)
+
+    // all buttons should call this function.
+    // in this function, you should get the innerHTML of span
+    // and show it with alert()
+}
+document.getElementById("turkey-btn").onclick = alert_capital_name
+document.getElementById("germany-btn").onclick = alert_capital_name
+document.getElementById("spain-btn").onclick = alert_capital_name
+
+function delete_city_li() {
+    this.parentNode.remove()
+}
+document.getElementById("delete-spain-btn").onclick = delete_city_li
+document.getElementById("delete-germany-btn").onclick = delete_city_li
+document.getElementById("delete-turkey-btn").onclick = delete_city_li
+
+</script>
+
+
+</body>
+</html>
