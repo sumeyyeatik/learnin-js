@@ -1,0 +1,71 @@
+<ul>
+	<li>
+		<span>Turkey</span>
+		<span>85 million</span>
+		<span>Ankara</span>
+		<div>
+			<span>Kocaeli</span>
+			<button>alert population1</button>
+			<button>delete country</button>
+		</div>
+	</li>
+	<li>
+		<span>Germany</span>
+		<span>80 million</span>
+		<span>Berlin</span>
+		<div>
+			<span>Dresden</span>
+			<button>alert population</button>
+			<button>delete country</button>
+		</div>
+	</li>
+</ul>
+
+
+<script type="text/javascript">
+/*
+function show_population() {
+	
+	let div = this.parentNode
+
+	let li = div.parentNode
+
+	let span_population = li.getElementsByTagName("span")[1]
+
+	alert(span_population.innerHTML)
+}
+*/
+
+
+function show_population() {
+	
+
+	let span_population = this.parentNode.parentNode.getElementsByTagName("span")[1]
+
+	alert(span_population.innerHTML)
+}
+
+function delete_country () {
+
+	alert(this.parentNode.parentNode.getElementsByTagName("span")[0].innerHTML)
+	// let li = this.parentNode.parentNode
+	// li.remove()
+
+	this.parentNode.parentNode.remove()
+
+
+	
+}
+
+
+document.getElementsByTagName("button")[0].onclick=show_population
+document.getElementsByTagName("button")[2].onclick=show_population
+document.getElementsByTagName("button")[1].onclick=delete_country
+document.getElementsByTagName("button")[3].onclick=delete_country
+
+// DESCRIPTION: when `alert population` buttons are clicked, the population of the relevant country will be alerted.
+// CONSTRAINTS: 
+// - do not use getElementById and getElementsByClassName
+	// here, delete the country.
+
+</script>
