@@ -1,0 +1,50 @@
+Country: <input id="country-box" /> <br />
+Population: <input id="population-box" /><br />
+<button id="add-btn">Add</button>
+<hr />
+
+<ul id="country-pop-list">
+	
+</ul>
+
+<script type="text/javascript">
+	
+// DESCRIPTION: when `alert population` buttons are clicked, the population of the relevant country will be alerted.
+// CONSTRAINTS: 
+// - do not use getElementById and getElementsByClassName
+		
+  
+  function show_population (){
+    let div = this.parentNode
+    let li = div.parentNode
+    let spans = li.getElementsByTagName("span")
+    let population_span = spans[1]
+    alert(population_span.innerHTML)
+ 		 // alert(this.parentNode.parentNode.getElementsByTagName("span")[1].innerHTML)
+  }
+  
+  
+  function delete_country() {
+    this.parentNode.parentNode.remove()
+   
+  }
+  
+  function add_country_to_the_li() {
+	console.log("hey")
+		var country =document.getElementById("country-box").value
+		var population =document.getElementById("population-box").value
+	
+       
+    	var new_list = document.createElement("li")
+		new_list.innerHTML = "<span>" + country + "</span><span>" + population + "</span>" + "<div><button>alert population</button><button>delete</button></div>"
+		new_list.getElementsByTagName("button")[0].onclick=show_population
+		new_list.getElementsByTagName("button")[1].onclick=delete_country
+		document.getElementById("country-pop-list").appendChild(new_list)
+
+    }
+
+
+document.getElementById("add-btn").onclick=add_country_to_the_li
+
+
+</script>
