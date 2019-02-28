@@ -1,0 +1,31 @@
+<script type="text/javascript">
+let cities = [
+    ["Istanbul", "Kocaeli", "Bolu"],
+    ["Berlin", "Hamburg"],
+    ["Madrid", "Barcelona", "Valencia"],
+    ["London", "Bristol"]
+];
+//let search_city = "Istanbul";
+
+	for (let i = 0; i < cities.length; i ++) {
+		let city = cities[i]
+		for (let k = 0; k < city.length; k++) {
+			let city_name = city[k]
+		
+		let search_city = "Istanbul"
+		if (city_name == search_city) {
+			console.log("found")
+		} 
+		}
+		
+	}
+
+
+//elimde şehirlerin yazdığı bir dizi var, yapmam gereken istanbul'u array'de bulup console'da found yazdırmak
+//
+
+
+// write your code here. if the city is found in the array, 
+// print "found" into console
+// otherwise print "not found"
+</script>
