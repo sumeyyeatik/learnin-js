@@ -1,0 +1,12 @@
+
+let colors = ["blue", "red", "yellow", "green", "black"];
+let keyword = "white";
+// search the keyword within the the array of colors and 
+// print "found" to console, or else "not found"
+
+for (let i =0; i <colors.length; i++ ){
+	color_iteration = colors[i]
+	if (keyword = color_iteration) {
+		console.log("found")
+	}
+}
