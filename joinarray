@@ -1,0 +1,30 @@
+<script type="text/javascript">
+let cities = [
+    ["Istanbul", "Kocaeli", "Bolu"],
+    ["Berlin", "Hamburg"],
+    ["Madrid", "Barcelona", "Valencia"],
+    ["London", "Bristol"]
+];
+
+let string = " "
+
+for (let i = 0 ; i < cities.length; i++) {
+	let city = cities[i]
+		for (let j = 0; j < city.length; j++) {
+		city_name = city[j]
+		//console.log(city_name)
+		
+		string = string + " , "+ city_name;
+		
+		
+
+	}
+}
+console.log(string)
+
+// write your code here. build a string which contains all the cities seperated with a comma.
+// string should be similar to this
+// let cities = "Istanbul, Kocaeli, Bolu, Berlin, Hamburg, ...., London, Bristol, ";
+
+
+</script>
