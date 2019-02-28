@@ -1,0 +1,22 @@
+
+let cities = [
+	["Berlin", "Istanbul", "Paris"],
+	["Rome", "Ankara", "Munich"],
+	["Kocaeli", "London", "Barcelona"]
+];
+let keyword = "Munich";
+
+for (let i = 0; i < cities.length; i++) {
+	let city_arrays = cities[i]
+	for (let k = 0; k <city_arrays.length; k++) {
+		let city_inarrays = city_arrays[k]
+		if (city_inarrays == keyword ) {
+			console.log("found")
+		} else {
+			console.log("not found")
+		}
+	}
+
+}
+// search the keyword within the the array of the array of cities and 
+// print "found" to console, or else "not found"
