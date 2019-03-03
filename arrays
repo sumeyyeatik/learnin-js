@@ -1,0 +1,11 @@
+<script type="text/javascript">
+let words = ["Hello", "how", "are", "you"];
+//join the words withing the given array to have a string that is equal "Hello how are you "
+
+let sentence = ""
+for (let i = 0; i < words.length; i++) {
+let word = words[i]
+sentence = sentence + word + ","
+}
+console.log(sentece)
+</script>
